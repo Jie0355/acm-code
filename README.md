@@ -1,4 +1,4 @@
-# Code Of CPP
+# Learning & Coding :)
 
 我的C/C++语言学习笔记。
 
@@ -16,3 +16,7 @@ using namespace std;
 
 // END OF HEADER
 ```
+## 待办事项
+
+- [ ] 最短路。包括但不限 `Dijkstra/Floyd/Bellman-Ford/SPFA` #1
+- [ ] 最小生成树。包括但不限 `Prim/Kruskal` #2
