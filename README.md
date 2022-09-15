@@ -18,5 +18,5 @@ using namespace std;
 ```
 ## 待办事项
 
-- [ ] 最短路。包括但不限`Dijkstra/Floyd/Bellman-Ford/SPFA`#1
-- [ ] 最小生成树。包括但不限`Prim/Kruskal`#2
+- [ ] 最短路。包括但不限 `Dijkstra/Floyd/Bellman-Ford/SPFA` #1
+- [ ] 最小生成树。包括但不限 `Prim/Kruskal` #2
