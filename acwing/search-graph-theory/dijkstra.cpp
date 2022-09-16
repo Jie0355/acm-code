@@ -13,7 +13,6 @@ void Dijkstra(int u) {
         int t = -1;
         for (int j = 1; j <= v; j ++)
             if (!vis[j] && (t == -1 || dist[t] > dist[j])) t = j;
-        if (t == -1) return;
         vis[t] = true;
         for (int j = 1; j <= v; j ++)
             dist[j] = min(dist[j], dist[t] + Gph[t][j]);
@@ -21,7 +20,8 @@ void Dijkstra(int u) {
 }
 int main() {
     cin >> v >> e;
-    memset(Gph, INF, sizeof(Gph));
+    memset(Gph, INF, sizeof Gph);
+    memset(vis, false, sizeof vis)
     while (e --) {
         int a, b, w;
         cin >> a >> b >> w;
