@@ -11,8 +11,9 @@
 	- Stack：栈/链栈。
 	- Tree：二叉树。
 - Acwing：[Acwing](https://www.acwing.com/)算法学习。
-- GPLT：[GPLT](https://pintia.cn/problem-sets/994805046380707840/problems/type/7)天梯赛练习集。包括 `L2(44)/L3(33)` 共77题。
-
+- Archive：代码归档。目前包括以下内容。
+	- [GPLT](https://pintia.cn/problem-sets/994805046380707840/problems/type/7)：天梯赛练习集。
+	- C++：课程思考题。
 
 ## 文件头
 ```cpp
