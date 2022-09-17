@@ -48,18 +48,20 @@ void add(int a, int b, int w) {
 }
 void Dijkstra(int u) {
     memset(dist, INF, sizeof dist);
-    dist[u] = 0;
     priority_queue<PII, vector<PII>, greater<PII>> heap;
+    dist[u] = 0;
     heap.push({0, 1});
     while (heap.size()) {
         auto t = heap.top();
         heap.pop();
-        if (vis[t.second]) continue;
-        vis[t.second] = true;
-        for (int i = hd[t.second]; i != -1; i = ne[i]) {
-            if (dist[el[i]] > dist[t.second] + wi[i]) {
-                dist[el[i]] = dist[t.second] + wi[i];
-                heap.push({dist[el[i]], el[i]});
+        int ver = t.second, dis = t.first;
+        if (vis[ver]) continue;
+        vis[ver] = true;
+        for (int i = hd[ver]; i != -1; i = ne[i]) {
+            int k = el[i];
+            if (dist[k] > dis + wi[i]) {
+                dist[k] = dis + wi[i];
+                heap.push({dist[k], el[i]});
             }  
         }
     }
