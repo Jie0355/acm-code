@@ -1,0 +1,1 @@
+{"name":"Local: spfa","url":"d:\\GitRepo\\acwing\\search-graph-theory\\spfa.cpp","tests":[{"id":1663660777139,"input":"3 3\n1 2 5\n2 3 -3\n1 3 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\GitRepo\\acwing\\search-graph-theory\\spfa.cpp","group":"local","local":true}
