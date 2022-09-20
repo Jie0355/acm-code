@@ -21,9 +21,8 @@
 
 using namespace std;
 
+// 玄学加速I/O
 #define IOS ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-
-// END OF HEADER
 ```
 
 ## 待办事项

@@ -1,46 +1,49 @@
 #include <iostream>
 #include <cstring>
+#include <vector>
 #include <queue>
 using namespace std;
+const int N = 1e4 + 10, M = 5e5 + 10;
+const int INF = 0x3f3f3f3f;
 typedef pair<int, int> PII;
-const int M = 1e4 + 10, INF = 0x3f3f3f3f;
-int v, e, st;
-int head[M], wi[M], el[M], ne[M], idx = 0;
-int dist[M];
-bool vis[M];
-void add(int a, int b, int w) {
-    wi[idx] = w, el[idx] = b;
-    ne[idx] = head[a], head[a] = idx;
+int vex, acs, st;
+int h[M], w[M], e[M], ne[M], idx = 0;
+int dist[N];
+bool vis[N];
+void add(int a, int b, int wi) {
+    w[idx] = wi, e[idx] = b;
+    ne[idx] = h[a], h[a] = idx;
     idx ++;
 }
 void Dijkstra(int u) {
+    priority_queue<PII, vector<PII>, greater<>> heap;
     memset(dist, INF, sizeof dist);
     dist[u] = 0;
-    priority_queue<PII, vector<PII>, greater<PII>> heap;
-    heap.push({0, u});
+    heap.push({dist[u], u});
     while (heap.size()) {
         auto t = heap.top();
         heap.pop();
-        if (vis[t.second]) continue;
-        vis[t.second] = true;
-        for (int i = head[t.second]; i != -1; i = ne[i]) {
-            if (dist[el[i]] > dist[t.second] + wi[i]) {
-                dist[el[i]] = dist[t.second] + wi[i];
-                heap.push({dist[el[i]], el[i]});
+        int ver = t.second, dis = t.first;
+        if (vis[ver]) continue;
+        vis[ver] = true;
+        for (int i = h[ver]; i != -1; i = ne[i]) {
+            int k = e[i];
+            if (dist[k] > w[i] + dis) {
+                dist[k] = w[i] + dis;
+                heap.push({dist[k], k});
             }
         }
     }
 }
 int main() {
-    cin >> v >> e >> st;
-    memset(head, -1, sizeof head);
+    memset(h, -1, sizeof h);
     memset(vis, false, sizeof vis);
-    while (e --) {
+    cin >> vex >> acs >> st;
+    while (acs --) {
         int a, b, w;
         cin >> a >> b >> w;
         add(a, b, w);
     }
     Dijkstra(st);
-    for (int i = 1; i <= v; i ++) cout << dist[i] << " ";
-    return 0;
+    for (int i = 1; i <= vex; i ++) cout << dist[i] << " ";
 }
