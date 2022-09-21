@@ -4,7 +4,6 @@
 #include <queue>
 using namespace std;
 const int N = 1e4 + 10, M = 5e5 + 10;
-const int INF = 0x3f3f3f3f;
 typedef pair<int, int> PII;
 int vex, acs, st;
 int h[M], w[M], e[M], ne[M], idx = 0;
@@ -17,7 +16,7 @@ void add(int a, int b, int wi) {
 }
 void Dijkstra(int u) {
     priority_queue<PII, vector<PII>, greater<>> heap;
-    memset(dist, INF, sizeof dist);
+    for (int i = 1; i <= vex; i ++) dist[i] = 2147483647;
     dist[u] = 0;
     heap.push({dist[u], u});
     while (heap.size()) {
@@ -46,4 +45,5 @@ int main() {
     }
     Dijkstra(st);
     for (int i = 1; i <= vex; i ++) cout << dist[i] << " ";
+    return 0;
 }
