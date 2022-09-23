@@ -29,3 +29,4 @@ using namespace std;
 
 - [x] 最短路。包括但不限 `Dijkstra/Floyd/Bellman-Ford/SPFA` #1
 - [ ] 最小生成树。包括但不限 `Prim/Kruskal` #2
+- [ ] 动态规划。搜索与图论内容结束后初步学习动态规划。#3
