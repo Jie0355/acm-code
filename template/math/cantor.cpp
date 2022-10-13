@@ -1,4 +1,3 @@
-//康托展开（Cantor Expansion）
 #include <bits/stdc++.h>
 using namespace std;
 long long factorial(int x)
