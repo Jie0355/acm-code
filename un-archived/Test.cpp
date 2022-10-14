@@ -1,31 +1,15 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
-typedef long long LL;
-const int M = 1e5 + 10, INF = 0x3f3f3f3f;
-const double eps = 1e-6;
+inline int Gcd1(int a, int b)  {  
+	while(b ^= a ^= b ^= a %= b);
+	return a;
+}
+inline int Gcd2(int a, int b)  {  
+	if (b) while ((a %= b) && (b %= a));
+	return a + b;
+}
 int main() {
-	int n, L;
-	LL arr[M];
-	cin >> n >> L;
-	double l = INF, r = 0;
-	for (int i = 0; i < n; i ++) {
-		cin >> arr[i];
-		l = min(l, (double)arr[i]);
-		r = max(r, (double)arr[i]);
-	}
-	double sum[M] = {0};
-	while (r - l > eps) {
-		double mid = (l + r) / 2.0;
-		for (int i = 0; i < n; i ++)
-			sum[i + 1] = sum[i] + (double)arr[i] - mid;
-		double sumMax = - INF, preMin = 0;
-		for (int i = L; i <= n; i ++) {
-			sumMax = max(sumMax, sum[i] - preMin);
-			preMin = min(preMin, sum[i - L + 1]);
-		}
-		if (sumMax >= 0) l = mid;
-		else r = mid;
-	}
-	cout << l * 1000 << '\n';
+	cout << Gcd2(114514, 8795614);
 	return 0;
 }
