@@ -1,1 +1,0 @@
-{"name":"Local: C","url":"d:\\GitRepo\\archive\\CodeForces\\Div.2\\825\\C.cpp","tests":[{"id":1665486567492,"input":"3\n3\n1 2 3\n3\n1 1 1\n4\n2 1 4 3\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\GitRepo\\archive\\CodeForces\\Div.2\\825\\C.cpp","group":"local","local":true}

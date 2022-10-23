@@ -24,6 +24,8 @@ TXT::~TXT() {
 	
 }
 void TXT::Enciper() {
+	// Sky-Eagle行动失败，麻雀已牺牲，原先的信件交换地址已不安全，转移至衡兴北街586号C20信箱，请速与我联系。
+	// AaBbCcDdEeFfGgHhIiJjKkL
 	cipher.clear();
 	for (int i = 0; i < plain.size(); i ++) {
 		int t;

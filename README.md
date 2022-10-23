@@ -15,13 +15,13 @@
   - Luogu：洛谷。
   - LeetCode：力扣。
   - GPLT：天梯赛练习集。
-- STL：容器学习。目前包括以下内容。
+- STL：容器的学习。目前包括以下内容。
   - Stack：栈。
   - Queue：队列。
   - String：字符串。
   - Vector：向量。
   - Set：集合。
-  - Pair：对。
+  - Pair：对类。
 - Data-Structure：数据结构。目前包括以下内容 。
   - List：顺序表/链表。
   - Queue：队列/链队列。
@@ -46,4 +46,4 @@ using namespace std;
 - [ ] 最小生成树。包括但不限 `Prim/Kruskal` #2
 - [ ] 动态规划。DP。`搜索与图论内容结束后初步学习动态规划` #3
 
-> Last Updated in 2022/9/24
+> Last Updated in 2022/10/23
