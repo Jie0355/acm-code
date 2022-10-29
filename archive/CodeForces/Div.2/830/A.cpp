@@ -1,12 +1,8 @@
 #include <bits/stdc++.h>
 #define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 using namespace std;
-typedef long long LL;
-const int INF = 0x3f3f3f3f;
-int isPrime(int x) {
-    if (x == 2) return 0;
-    for (int i = 2; i <= sqrt(x); i++)
-        if (x % i == 0) return 0;
+inline int Gcd(int x, int y) {
+    while (y ^= x ^= y ^= x %= y);
     return x;
 }
 int main() {
@@ -16,48 +12,30 @@ int main() {
     while (t --) {
         int n, arr[25];
         cin >> n;
+        int nx = -1, cost = 0;
         for (int i = 1; i <= n; i ++) cin >> arr[i];
-        if (n == 1) {
-            if (isPrime(arr[n])) {
-                cout << 0 << '\n';
-                continue;
-            }
-            else {
-                cout << 1 << '\n';
-                continue;
-            }
+        for (int i = 1; i <= n; i ++) {
+            for (int j = i; j <= n; j ++)
+                if (Gcd(arr[i], arr[j]) == 1) {nx = 0; break;}
+            if (!nx) break;
         }
-        int nx1 = 0;
-        for (int i = 1; i < n; i ++) {
-            for (int j = i + 1; j <= n; j ++) {
-                if (__gcd(arr[i], arr[j]) == 1) {
-                    cout << 0 << '\n';
-                    nx1 = 1; break;
-                }
-            }
-            if (nx1) break;
-        }
-        if (nx1) continue;
-        int cost, ans = INF;
-        for (int i = n; i > 1; i --) {
-            cost = 0;
-            for (int j = i - 1; j > 0; j --) {
-                if (__gcd(__gcd(arr[i], i), arr[j]) == 1) {
-                    cost = n - i + 1;
-                    break;
-                }
-                else if (__gcd(arr[i], __gcd(arr[j], j)) == 1) {
-                    cost = n - j + 1;
-                    break;
-                }
-                else if (__gcd(__gcd(arr[i], i), __gcd(arr[j], j)) == 1) {
-                    cost = n - i + 1 + n - j + 1;
-                    break;
-                }
-            }
-            if (cost) ans = min(ans, cost);
-        }
-        cout << ans << '\n';
-    }
+        if (!nx) {cout << cost << '\n'; continue;}
+        // The Last
+        int t = Gcd(arr[n], n);
+        cost = 1;
+        if (t == 1) {cout << cost << '\n'; continue;}
+        for (int i = n; i >= 1; i --)
+            if (Gcd(t, arr[i]) == 1) nx = 1;
+        if (nx == 1) {cout << cost << '\n'; continue;}
+        // Second Last
+        t = Gcd(arr[n - 1], n - 1);
+        cost = 2;
+        if (t == 1) {cout << cost << '\n'; continue;}
+        for (int i = n; i >= 1; i --)
+            if (Gcd(t, arr[i]) == 1) nx = 2;
+        if (nx == 2) {cout << cost << '\n'; continue;}
+        // Both
+        cout << 3 << '\n';
+    }   
     return 0;
 }

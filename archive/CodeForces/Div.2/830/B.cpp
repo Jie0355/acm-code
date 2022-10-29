@@ -7,22 +7,18 @@ int main() {
     int t;
     cin >> t;
     while (t --) {
-        int n, nx = 1;
-        string str;
+        int n, ans = 0;
+        char nx[5] = {"01"};
         cin >> n;
+        int t = -2;
         for (int i = 0; i < n; i ++) {
             char x;
             cin >> x;
-            if (x == nx + '0') {
-                str.push_back(x);
-                nx = 1 - nx;
-            }
+            if (t == -2 && x == nx[1]) t = -1;
+            if (t == -1 && x == nx[0]) t = 0;
+            if (t >=  0 && x == nx[t]) {ans ++; t = 1 - t;}
         }
-        // LL ans = 0;
-        // if (str.size() & 1) ans = ((str.size() + 1) / 2 - 1) * 2;
-        // else ans = ((str.size() + 1) / 2 - 1) * 2 + 1;
-        // cout << ans << '\n';
-        cout << str.size() - 1 << '\n';
+        cout << ans << '\n';
     }
     return 0;
 }
