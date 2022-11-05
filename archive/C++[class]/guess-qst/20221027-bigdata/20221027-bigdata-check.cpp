@@ -8,7 +8,7 @@ int main() {
     int o = 9856;
     vector<vector<int>> v(M);
     FILE *fp;
-    fp = fopen("bigdata-80w.txt", "rb");
+    fp = fopen("bigdata-10w.txt", "rb");
     while (!feof(fp)) {
         int idx, x;
         fscanf(fp, "%d %d", &idx, &x);
