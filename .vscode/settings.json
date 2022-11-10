@@ -77,7 +77,7 @@
         "editor.smoothScrolling": true,
         "editor.cursorSmoothCaretAnimation": true,
         "workbench.list.smoothScrolling": true,
-        "workbench.editor.enablePreview": false,
+        "workbench.editor.enablePreview": true,
         "workbench.editor.wrapTabs": true,
         "explorer.confirmDelete": false,
         "explorer.confirmDragAndDrop": false,
