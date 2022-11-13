@@ -2,16 +2,14 @@
 #define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 using namespace std;
 typedef long long LL;
-const int M = 45;
+const int M = 55;
 int main() {
     IOS
+    LL dp[M];
+    dp[2] = 1, dp[3] = 2;
+    for (int i = 4; i <= 20; i ++)
+        dp[i] = (i - 1) * (dp[i - 1] + dp[i - 2]);
     int n;
-    LL cnt = 1, dp[M];
-    dp[1] = 3;
-    for (int i = 2; i <= 39; i ++) {
-        dp[i] = 3 * dp[i - 1] - cnt;
-        cnt = dp[i - 1] - cnt;
-    }
     while (cin >> n) cout << dp[n] << '\n';
     return 0;
 }

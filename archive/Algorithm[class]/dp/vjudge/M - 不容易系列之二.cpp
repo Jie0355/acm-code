@@ -4,10 +4,10 @@ using namespace std;
 const int M = 35;
 void solve() {
     int n, dp[M];
+    dp[0] = 3;
     cin >> n;
-    dp[1] = 1, dp[2] = 3;
-    for (int i = 3; i <= n; i ++)
-        dp[i] = dp[i - 1] + 2 * dp[i - 2];
+    for (int i = 1; i <= n; i ++)
+        dp[i] = 2 * (dp[i - 1] - 1);
     cout << dp[n] << '\n';
 }
 int main() {
