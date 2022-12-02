@@ -1,1 +1,0 @@
-{"name":"Local: Test","url":"d:\\GitRepo\\archive\\Algorithm[class]\\dp\\Test.cpp","tests":[{"id":1669095162673,"input":"5 10\n2 6\n2 3\n6 5\n5 4\n4 6\n","output":"15\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\GitRepo\\archive\\Algorithm[class]\\dp\\Test.cpp","group":"local","local":true}
