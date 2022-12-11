@@ -1,18 +1,17 @@
 #include <bits/stdc++.h>
 #define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 using namespace std;
+const int M = 1e5 + 10;
 void solve() {
-    int n, pre, is = 0, ans = -1;
+    int n, arr[M];
     cin >> n;
-    for (int i = 0; i < n; i ++) {
-        int x;
-        cin >> x;
-        ans = max(ans, x);
-        if (!i) pre = x;
-        if ((x - pre) % 5) is = 1;
+    int lstVal;
+    for (int i = 1; i <= n; i ++) {
+        cin >> arr[i];
+        if (i == 1) lstVal = arr[i];
+        else lstVal = __gcd(lstVal, arr[i]);
     }
-    if (is) cout << ans << '\n';
-    else cout << ans / 5 << '\n';
+    cout << arr[n] / lstVal << '\n';
 }
 int main() {
     IOS
