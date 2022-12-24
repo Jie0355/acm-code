@@ -16,12 +16,12 @@
   - NowCoder：牛客。
   - Luogu：洛谷。
   - Virtual Judge：VJudge。
-  - Match：竞赛代码。
+  - Acwing：[Acwing](https://www.acwing.com/)算法学习。
+- Match：正式竞赛代码。
+- Class：
   - Algorithm[class]：课程内容。
   - C++[class]：课程内容。包括常规题和 `思考题` 。
-  - Acwing：[Acwing](https://www.acwing.com/)算法学习。
 - UnArchived：暂未归档代码。
-- MySTL：容器的学习与实现。
 
 ## 文件头
 
@@ -37,4 +37,4 @@ using namespace std;
 - [ ] 最小生成树。包括但不限 `Prim/Kruskal` #2
 - [ ] 动态规划。DP。`搜索与图论内容结束后初步学习动态规划` #3
 
-> Last Updated in 2022/12/18
+> Last Updated in 2022/12/24

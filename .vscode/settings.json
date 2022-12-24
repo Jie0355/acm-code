@@ -81,8 +81,6 @@
         "workbench.editor.wrapTabs": false,
         "explorer.confirmDelete": false,
         "explorer.confirmDragAndDrop": false,
-        "window.menuBarVisibility": "visible",
-        "window.dialogStyle": "custom",
         "code-runner.runInTerminal": true,
         "code-runner.saveFileBeforeRun": true,
         "code-runner.customCommand": " cls",
