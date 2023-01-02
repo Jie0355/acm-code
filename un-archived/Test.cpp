@@ -8,6 +8,11 @@ int main() {
     cin.tie(nullptr);
 
     cout << "Hello World!" << '\n';
+    cout << "Hello World!" << '\n';
+    cout << "Hello World!" << '\n';
+    cout << "Hello World!" << '\n';
+    cout << "Hello World!" << '\n';
+    cout << "Hello World!" << '\n';
 
     return 0;
 }
