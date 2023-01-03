@@ -26,15 +26,22 @@
 ## 文件头
 
 ```cpp
-#include <bits/stdc++.h>
-#define IOS ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#include <bits/stdc++.h> // 万能头
+
 using namespace std;
+using i64 = long long; // 不开i64见祖宗
+
+int main() {
+    // 取消同步流 玄学加速
+    ios::sync_with_stdio(false); 
+    cin.tie(nullptr);
+
+    /**/
+    
+    return 0;
+}
 ```
 
-## 待办事项
+## 待办
 
-- [X] 最短路。包括但不限 `Dijkstra/Floyd/Bellman-Ford/SPFA` #1
-- [ ] 最小生成树。包括但不限 `Prim/Kruskal` #2
-- [ ] 动态规划。DP。`搜索与图论内容结束后初步学习动态规划` #3
-
-> Last Updated in 2022/12/24
+> Last Updated in 2023/01/03
