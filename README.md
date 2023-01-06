@@ -23,7 +23,7 @@
   - C++[class]：课程内容。包括常规题和 `思考题` 。
 - UnArchived：暂未归档代码。
 
-## 文件头
+## 代码模板
 
 ```cpp
 #include <bits/stdc++.h> // 万能头
