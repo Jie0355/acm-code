@@ -1,5 +1,7 @@
 # Learning & Coding :)
 
+Code once, think twice.
+
 我的C/C++语言学习笔记。
 
 ## 大纲
@@ -42,6 +44,4 @@ int main() {
 }
 ```
 
-## 待办
-
-> Last Updated in 2023/01/03
+> 码风参考@jiangly
