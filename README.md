@@ -1,8 +1,8 @@
 # Learning & Coding :)
 
-Code once, think twice.
+Code once, think twice:)
 
-我的C/C++语言学习笔记。
+我的ACM学习笔记。
 
 ## 大纲
 
@@ -20,9 +20,6 @@ Code once, think twice.
   - Virtual Judge：VJudge。
   - Acwing：[Acwing](https://www.acwing.com/)算法学习。
 - Match：正式竞赛代码。
-- Class：
-  - Algorithm[class]：课程内容。
-  - C++[class]：课程内容。包括常规题和 `思考题` 。
 - UnArchived：暂未归档代码。
 
 ## 代码模板
