@@ -7,11 +7,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int v[10];
-
-    sort(v, v + 10, [&](int x, int y) {
-        return x > y;
-    });
+    
 
     return 0;
 }
