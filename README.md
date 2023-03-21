@@ -1,6 +1,6 @@
 # Learning & Coding :)
 
-Code once, think twice:)
+> Code once, think twice:)
 
 我的ACM学习笔记。
 
@@ -19,7 +19,7 @@ Code once, think twice:)
   - Luogu：洛谷。
   - Virtual Judge：VJudge。
   - Acwing：[Acwing](https://www.acwing.com/)算法学习。
-- Match：正式竞赛代码。
+- Match：各种比赛代码。
 - UnArchived：暂未归档代码。
 
 ## 代码模板
@@ -35,7 +35,7 @@ int main() {
     ios::sync_with_stdio(false); 
     cin.tie(nullptr);
 
-    /**/
+    /* code here */
     
     return 0;
 }
