@@ -20,11 +20,6 @@ int main() {
 
     sort(pos + 1, pos + n + 1);
 
-    if (d == 1) {
-        cout << "IMPOSSIBLE" << '\n';
-        return 0;
-    }
-
     int now = 0;
     vector<int> ans;
     bool is = true;

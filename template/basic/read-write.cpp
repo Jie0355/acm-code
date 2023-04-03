@@ -1,7 +1,7 @@
 // @description 快读快写
-using valueType = int;
-valueType read() {
-    valueType x = 0, np = 1;
+using ValueType = int;
+ValueType read() {
+    ValueType x = 0, np = 1;
     char c = getchar();
     if (c == '-') {
         np = -1;
@@ -13,7 +13,7 @@ valueType read() {
     }
     return x * np;
 }
-void write(valueType x) {
+void write(ValueType x) {
     if (x < 0) {
         putchar('-');
         x = -x;

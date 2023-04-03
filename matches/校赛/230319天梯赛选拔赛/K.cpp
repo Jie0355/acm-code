@@ -76,7 +76,7 @@ int main() {
                     } else break;
                 }
             }
-            i64 r = xi * k;
+            i64 r = (i64)xi * k;
             pos = upper_bound(arr, arr + n, r) - arr - 1;
             while (pos < n && arr[pos] == r) {
                 vis[pos] = true;

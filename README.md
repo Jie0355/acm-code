@@ -8,17 +8,13 @@
 
 - Template：代码模板，目前包括以下内容。
   - Basic：基础算法。 
-  - Dp：动态规划。
   - Graph：图论。
-  - Math：数论。
   - String：字符串。
 - Archive：代码归档。目前包括以下内容。
-  - CodeForces：CF。
-  - AtCoder：ABC。
-  - NowCoder：牛客。
-  - Luogu：洛谷。
-  - Virtual Judge：VJudge。
   - Acwing：[Acwing](https://www.acwing.com/)算法学习。
+  - AtCoder：ABC。
+  - CodeForces：CF。
+  - Luogu：洛谷。
 - Match：各种比赛代码。
 - UnArchived：暂未归档代码。
 
