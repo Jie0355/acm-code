@@ -11,12 +11,9 @@ int main() {
     cin >> k >> a >> b;
 
     i64 ans = 0;
-    if (a <= 0 && b >= 0)
-        ans = -a / k + b / k + 1;
-    else if (a > 0)
-        ans = b / k - (a - 1) / k;
-    else if (b < 0)
-        ans = -a / k - (-b - 1) / k;
+    if (a <= 0 && b >= 0) ans = -a / k + b / k + 1;
+    else if (a > 0) ans = b / k - (a - 1) / k;
+    else if (b < 0) ans = -a / k - (-b - 1) / k;
 
     cout << ans << '\n';
 
