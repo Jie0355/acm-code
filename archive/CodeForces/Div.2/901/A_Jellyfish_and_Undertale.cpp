@@ -4,16 +4,18 @@ using namespace std;
 using i64 = long long;
 
 void solve() {
-    int n;
-    cin >> n;
+    int a, b, n;
+    cin >> a >> b >> n;
 
-    vector<int> v;
-    for (int i = 0, x; i < n; i++) {
-        cin >> x;
-        v.push_back(x);
+    vector<int> v(n);
+    for (int i = 0; i < n; i++) cin >> v[i];
+
+    i64 ans = b;
+    for (int i = 0; i < n; i++) {
+        ans += min(a - 1, v[i]);
     }
 
-    vector<int> xorv(v);
+    cout << ans << '\n';
 }
 
 int main() {
@@ -22,7 +24,6 @@ int main() {
 
     int t;
     cin >> t;
-    cout << t << '\n';
 
     while (t--) solve();
 
